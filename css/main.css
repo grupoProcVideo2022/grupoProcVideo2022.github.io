@@ -3,8 +3,7 @@ html {
 }
 
 body{
-    /*background: #81e3a0;*/
-    background-image: repeating-linear-gradient(to bottom right, #195858, #238080);
+    background: #81e3a0;
     font-family: 'Ubuntu', sans-serif;
     margin: 0 10px;
     background-attachment: fixed;
@@ -82,7 +81,7 @@ code {
 
 .link:hover {  
   background-color: rgba(255, 255, 255, 0);
-  /*border: 1px solid black;*/
+  /*border: 1px solid green;*/
   font-size: 100%;
 }
 
