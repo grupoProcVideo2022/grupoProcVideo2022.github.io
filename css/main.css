@@ -3,7 +3,7 @@ html {
 }
 
 body{
-    /*background: #195858;*/
+    /*background: #81e3a0;*/
     background-image: repeating-linear-gradient(to bottom right, #195858, #238080);
     font-family: 'Ubuntu', sans-serif;
     margin: 0 10px;
@@ -58,7 +58,7 @@ code {
 	width: 15%;
 	height: 100%;
 	overflow: auto;
-  border: 1px solid black;
+  border: 1px solid green;
 }
 
 #menu a {
