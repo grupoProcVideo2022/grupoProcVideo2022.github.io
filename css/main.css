@@ -50,12 +50,6 @@ code {
   padding: 10px;
   font-size: 100%;
 }
-
-#csm{
-    color:rgb(243, 236, 145);
-    font-family: 'Ubuntu', sans-serif;
-}
-
 #menu {
   background-color: #195858;
 	float: left;
@@ -96,14 +90,14 @@ code {
 	background-color: #238080;
 	float: right;
 	width: 84%;
-  border: 1px solid black;
+  border: 1px solid green;
 	margin: 1px;
 }
 
 #arealab {	
 	background-color: #238080;
   width: 90%;
-  border: 1px solid black;
+  border: 1px solid green;
 	margin: auto;
 }
 
