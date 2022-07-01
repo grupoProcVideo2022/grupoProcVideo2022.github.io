@@ -50,7 +50,7 @@ code {
   font-size: 100%;
 }
 #menu {
-  background-color: #195858;
+  background-color: #38b064;
 	float: left;
 	margin: 1px 0px;
 	padding: 0;
@@ -86,7 +86,7 @@ code {
 }
 
 #area {	
-	background-color: #238080;
+	background-color: #3dfc83;
 	float: right;
 	width: 84%;
   border: 1px solid green;
@@ -94,7 +94,7 @@ code {
 }
 
 #arealab {	
-	background-color: #238080;
+	background-color: #3dfc83;
   width: 90%;
   border: 1px solid green;
 	margin: auto;
