@@ -12,22 +12,22 @@
     <a href=https://colab.research.google.com/drive/1YHMxuD8mZFYMqPN5aDOnhdx63phjLaCh?usp=sharing
     >Código no Colab</a>
     <div>
-        <p>Histograma Original</p>
+        <p>HISTOGRAMA ORIGINAL</p>
 						<img src="imgs/foto_ana.jpeg" alt="">
                         <img src="imgs/Hist_ana_original.png" alt="">
 						<p>   </p>
 						<p> Pode-se observar alguns picos de pixels nas faixas de 50, 100 e 200, mas a concentração máxima de pixels chega a apenas 6.000, o que indica que os pixels estão bem distribuidos. </p>
-						<img src="imgs/foto_mariana.png" alt="">
+						<img src="imgs/foto_mariana.jpeg" alt="">
 						<img src="imgs/hist_mariana_original.png" alt="">
 						<p>   </p>
 						<p> A maior concentraç&atilde;o de pixels está na faixa de 150 a 170, ou seja, pixels de tonalidade media e clara.  </p>
-						<img src="imgs/foto_arthur.png" alt="">
+						<img src="imgs/foto_arthur.jpeg" alt="">
 						<img src="imgs/hist_arthur_original.png" alt="">
 						<p>   </p>
 						<p> A foto &eacute; mais clara e luminosa que as outras duas, pode-se observar no histograma uma concentração de 100.000 pixels na faixa de 240-250, o que indica uma altíssima quantidade de pixels mais claros.    </p>
 						<p>   </p>
 						
-                        <p>Equalizaç&atilde;o do histograma</p>
+                        <p>EQUALIZAÇ&Atilde;O DO HISTOGRAMA</p>
 						<p> A equalizaç&atilde;o do histograma &eacute feita por uma funç&atilde;o de transformaç&atilde;o que mapeia os pixels de entrada da regi&atilde;o mais clara para os pixels de saida.  </p>
                         <img src="imgs/mascara_ana.png" alt="">
                         <img src="imgs/hist_mascara_ana.png" alt="">
@@ -62,7 +62,7 @@
 						<p>   </p>
 						
 						
-                        <p>Simple Thresholding</p>
+                        <p>SIMPLE THRESHOLDING</p>
                         <p> M&eacute;todo que determina um limiar abaixo do qual os pixels são transformados em zero, e acima são transformados no valor máximo definido. Utilizou-se um c&oacute;digo onde aplica-se cinco funç&otilde;es: transformaç&atilde bin&aacute;ria, transformaç&atilde;o bin&aacute;ria invertida, transformaç&atilde;o truncada, transformaç&atilde;o para zero e transformaç&atilde;o para zero invertida.</p>
                         <img src="imgs/simp_t_ana.png" alt="">
                         <p>   </p>
@@ -71,7 +71,7 @@
 						<img src="imgs/simp_t_arthur.png" alt="">
 						<p>   </p>
 						
-						 <p>Adaptive Thresholding</p>
+						 <p>ADAPTATIVE THRESHOLDING</p>
                         <p> No caso anterior, o limiar &eacute; um valor definido, o que pode n&atilde;o ser o ideial em imagens com diferentes graus de iluminaç&atilde;o. Por isso, aplica-se o M&eacute;todo Adaptive Thresholding, onde o algoritmo determina o limiar para um pixel com base em uma pequena região ao seu redor.</p>
                         <img src="imgs/adapt_t_ana.png" alt="">
                         <p>   </p>
@@ -80,7 +80,7 @@
 						<img src="imgs/adapt_t_arthur.png" alt="">
 						<p>   </p>
 						
-						<p>Otsu's Binarization</p>
+						<p>OTSU'S BINARIZATION</p>
                         <p> Este m&eacute;todo determina um valor de limiar global ideal a partir do histograma da imagem. Comparando a aplicaç&atilde;o do m&eacute; todo Global Thresholding e da aplicaç&atilde;o do Otsu's Thresholding, pode-se observar que a imagem resultante do Otsu's Thresholding apresenta melhor resultado. </p>
                         <img src="imgs/otsu_ana.png" alt="">
                         <p>   </p>
