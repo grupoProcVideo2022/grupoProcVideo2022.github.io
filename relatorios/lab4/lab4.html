@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Relatorio Lab 4</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/main.css">
+    </head>
+    <body>
+        <header>
+            <h1>Relatório Laboratório 4 - Histogramas </h1>
+        </header>
+        <section>
+            <nav id="menu">
+                    <div class="link"><a href="lab1.html">Laboratório 1</a></div>
+                    <div class="link"><a href="../lab2/lab2.html">Laboratório 2</a></div>            
+                    <div class="link"><a href="../lab3/lab3.html">Laboratório 3</a></div>
+					<div class="link"><a href="../lab3/lab3.html">Laboratório 4</a></div>
+                </nav>
+            <article>
+                <div id="area">
+                    <a href="https://colab.research.google.com/drive/1YHMxuD8mZFYMqPN5aDOnhdx63phjLaCh?usp=sharing">Código no Colab</a>
+                    <div>
+                        <p>Histograma Original</p>
+						<img src="imgs/foto_ana.png" alt="">
+                        <img src="imgs/hist_ana_original.png" alt="">
+						<p>   </p>
+						<p> Pode-se observar alguns picos de pixels nas faixas de 50, 100 e 200, mas a concentração máxima de pixels chega a apenas 6.000, o que indica que os pixels estão bem distribuidos. </p>
+						<img src="imgs/foto_mariana.png" alt="">
+						<img src="imgs/hist_mariana_original.png" alt="">
+						<p>   </p>
+						<p> A maior concentraç&atilde;o de pixels está na faixa de 150 a 170, ou seja, pixels de tonalidade media e clara.  </p>
+						<img src="imgs/foto_arthur.png" alt="">
+						<img src="imgs/hist_arthur_original.png" alt="">
+						<p>   </p>
+						<p> A foto &eacute; mais clara e luminosa que as outras duas, pode-se observar no histograma uma concentração de 100.000 pixels na faixa de 240-250, o que indica uma altíssima quantidade de pixels mais claros.    </p>
+						<p>   </p>
+						
+                        <p>Equalizaç&atilde;o do histograma</p>
+						<p> A equalizaç&atilde;o do histograma &eacute feita por uma funç&atilde;o de transformaç&atilde;o que mapeia os pixels de entrada da regi&atilde;o mais clara para os pixels de saida.  </p>
+                        <img src="imgs/mascara_ana.png" alt="">
+                        <img src="imgs/hist_mascara_ana.png" alt="">
+						<p>   </p>
+						<p> Após a aplicação do equalizador, pode-se observar uma maior concentração de pixels entre 0 e 100. Mesmo a maior concentração sendo relativamente baixa, entre 7.500 a 10.000 pixels, o resultado foi uma imagem mais escura que a original.  </p>
+						<img src="imgs/mascara_mariana.png" alt="">
+                        <img src="imgs/hist_mascara_mariana.png" alt="">
+						<p>   </p>
+						<p> Após a aplicação do equalizador, a nova imagem apresentou picos de concentração de pixels na faixa de 240 a 250, resultando em uma imagem bem mais clara que a original.  </p>
+						<img src="imgs/mascara_arthur.png" alt="">
+                        <img src="imgs/hist_mascara_arthur.png" alt="">
+						<p>   </p>
+						<p> Após a aplicação do equalizador, apresentou uma concentração de pixels na faixa de 10 - 100 e picos de pixels entre 180 - 220. O resultado foi uma foto mais escura que a original.  </p>
+						<p>   </p>
+						
+						<p> Abaixo est&atilde;o as imagens obtidas apos a equalizaç&atilde;o utilizando a funç&atilde;o cv.equalizeHist() do OpenCV . Os resultados obtidos foram melhores do que os obtidos aplicando a funç&atilde;o de transformaç&atilde;o.   </p>
+                        <img src="imgs/equal_ana.png" alt="">
+                        <p>   </p>
+						<img src="imgs/equal_mariana.png" alt="">
+                       	<p>   </p>
+						<img src="imgs/equal_arthur.png" alt="">
+                        <p>   </p>
+												
+						
+                        <p>CLAHE</p>
+                        <p> Para n&atilde;o perder informaç&atilde;o devido ao excesso de brilho das imagens, utiliza-se a equalizaç&atilde;o de histograma adaptativa, na qual a imagem &eacute dividida em varios blocos antes da aplicaç&atilde;o da funç&atilde;o de equalizaç&atilde.  </p>
+                        <img src="imgs/clahe_ana.png" alt="">
+                        <p>   </p>
+						<img src="imgs/clahe_mariana.png" alt="">
+						<p>   </p>
+						<img src="imgs/clahe_arthur.png" alt="">
+						<p>   </p>
+						
+						
+                        <p>Simple Thresholding</p>
+                        <p> M&eacute;todo que determina um limiar abaixo do qual os pixels são transformados em zero, e acima são transformados no valor máximo definido. Utilizou-se um c&oacute;digo onde aplica-se cinco funç&otilde;es: transformaç&atilde bin&aacute;ria, transformaç&atilde;o bin&aacute;ria invertida, transformaç&atilde;o truncada, transformaç&atilde;o para zero e transformaç&atilde;o para zero invertida.</p>
+                        <img src="imgs/simp_t_ana.png" alt="">
+                        <p>   </p>
+						<img src="imgs/simp_t_mariana.png" alt="">
+						<p>   </p>
+						<img src="imgs/simp_t_arthur.png" alt="">
+						<p>   </p>
+						
+						 <p>Adaptive Thresholding</p>
+                        <p> No caso anterior, o limiar &eacute; um valor definido, o que pode n&atilde;o ser o ideial em imagens com diferentes graus de iluminaç&atilde;o. Por isso, aplica-se o M&eacute;todo Adaptive Thresholding, onde o algoritmo determina o limiar para um pixel com base em uma pequena região ao seu redor.</p>
+                        <img src="imgs/adapt_t_ana.png" alt="">
+                        <p>   </p>
+						<img src="imgs/adapt_t_mariana.png" alt="">
+						<p>   </p>
+						<img src="imgs/adapt_t_arthur.png" alt="">
+						<p>   </p>
+						
+						<p>Otsu's Binarization</p>
+                        <p> Este m&eacute;todo determina um valor de limiar global ideal a partir do histograma da imagem. Comparando a aplicaç&atilde;o do m&eacute; todo Global Thresholding e da aplicaç&atilde;o do Otsu's Thresholding, pode-se observar que a imagem resultante do Otsu's Thresholding apresenta melhor resultado. </p>
+                        <img src="imgs/otsu_ana.png" alt="">
+                        <p>   </p>
+						<img src="imgs/otsu_mariana.png" alt="">
+						<p>   </p>
+						<img src="imgs/otsu_arthur.png" alt="">
+						<p>   </p>
+						
+					</div>
+						
+				</div>
+             
+			</article>				 
+
+                
+        </section>
+
+        <footer>
+            <h5>ESZI032-17SA Processamento de Vídeo 2.2022</h5>
+        </footer>
+    </body>
+</html>
