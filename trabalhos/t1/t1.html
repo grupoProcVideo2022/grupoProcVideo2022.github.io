@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <title>T1</title>
+</head>
+<body>
+    <div class="title">Tema: Reconhecimento visual de acordes tocados em violão e guitarra.</div>
+    <div class="title">Contexto</div>
+    <div class="text">
+        Um aluno que deseja aprender teoria musical e tem como instrumento de estudo um
+violão e/ou uma guitarra sente dificuldade ao estudar sozinho e acha incômodo procurar o tempo
+inteiro na internet os desenhos dos acordes quando está estudando uma música nova. Ao mesmo
+tempo, um músico profissional realizará um show com uma banda sem ensaiar ou conhecer o
+repertório de antemão, o que pode gerar confusão e erros durante a execução das músicas.
+    </div>
+    <div class="title">Cenário do trabalho</div>
+    <div class="text">Por isso, uma ferramenta capaz de reconhecer rapidamente quais acordes são
+        usados nos vídeos das músicas que devem tocadas facilitaria o trabalho tanto do estudante como do
+        músico profissional. O objetivo é usar vídeos gravados como sinal de entrada, realizar o pré-processamento e usar um algoritmo de classificação para reconhecer os acordes usados no vídeo.
+        A saída será o mesmo vídeo, acrescido do texto indicando a sigla dos acordes reconhecidos.
+    </div>
+
+    <div class="title">Atividades do Trabalho</div>
+    <div class="text">
+
+        O trabalho foi dividido nas seguintes fases:
+        <ul>
+            <li>Captação dos vídeos</li>
+            <li>Pré processamento dos vídeos captados</li>
+            <li>Treinamento do reconhecedor de acordes</li>
+            <li>Teste do reconhecedor de acordes</li>
+            <li>Avaliação dos resultados</li>
+        </ul>
+    </div>
+    <div class="title">Implementação do Trabalho</div>
+    <div class="subtitle">Pré-processamento dos vídeos</div>
+    <div class="text">Os vídeos captados devem possuir um enquadramento específico, bem como um formato e resolução pré definidos.
+        O algoritmo de pré-processamento serve para normalizar os vídeos nesse sentido. Apenas o enquadramento é uma tarefa anterior, que será de 
+        responsabilidade do próprio usuário.
+        Esses vídeos serão a base de dados usada no treinamento e teste do algoritmo de classificação.
+        Para ajustar a resolução do vídeo e o formato, é usado um código semelhante ao criado em aula, no laboratório 3.
+        <img src="imgs/lab3-code.png" alt="" srcset="">
+    </div>
+    <div class="subtitle">Treinamento do reconhecedor de acordes usando algoritmo de classificação</div>
+
+</body>
+</html>

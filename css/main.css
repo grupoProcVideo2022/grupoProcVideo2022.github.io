@@ -79,10 +79,28 @@ code {
   text-indent: 16px;
 }
 
-.link:hover {  
+.link:hover {
   background-color: rgba(255, 255, 255, 0);
   /*border: 1px solid green;*/
   font-size: 100%;
+}
+
+.title{
+  margin: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.subtitle{
+  margin: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.text{
+  margin: 5px 10px;
+  font-weight: normal;
+  font-size: 11px;
 }
 
 #area {	
