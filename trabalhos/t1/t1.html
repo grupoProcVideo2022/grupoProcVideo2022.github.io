@@ -43,9 +43,30 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
         responsabilidade do próprio usuário.
         Esses vídeos serão a base de dados usada no treinamento e teste do algoritmo de classificação.
         Para ajustar a resolução do vídeo e o formato, é usado um código semelhante ao criado em aula, no laboratório 3.
-        <img src="imgs/lab3-code.png" alt="" srcset="">
+        <img class="imgs" style="max-height: 100%;" src="imgs/code_example.png" alt="" srcset="">
+    </div>
+    <div class="text">Na imagem acima, a resolução do vídeo é 1080x1920, e o código reduz a 
+        resolução em 25%.
     </div>
     <div class="subtitle">Treinamento do reconhecedor de acordes usando algoritmo de classificação</div>
 
+    <div class="text">
+        Para o reconhecedor de acordes, será utilizada a biblioteca <a href="https://mediapipe.dev/" target="_blank" rel="noopener noreferrer">MediaPipe</a>,
+        que possui uma funcionalidade capaz de realizar a identificação de mãos em vídeo (<a href="https://google.github.io/mediapipe/solutions/hands" target="_blank" rel="noopener noreferrer">ver mais</a>).
+        Até o momento, usando MediaPipe, é possível fazer corretamente a captação dos movimentos da mão. O vídeo
+        abaixo exemplifica um resultado.
+    </div>
+    <div class="text">
+        <video width="352" height="640" controls="">
+            <source src="videos/hand_tracking.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="footer">
+    <div class ="title">Referências</div>
+    <div class="text">1. <i>OpenCV & Python: How to Change Resolution or Rescale Frame</i>, <a href="https://www.codingforentrepreneurs.com/blog/open-cv-python-change-video-resolution-or-scale/" target="_blank" rel="noopener noreferrer">link</a>.</div>
+    <div class="text">2. <i>MediaPipe online reference</i>, <a href="https://mediapipe.dev/" target="_blank" rel="noopener noreferrer">link</a>.</div>
+    <div class="text">3. <i>Building a Hand Tracking System using OpenCV</i>, <a href="https://www.analyticsvidhya.com/blog/2021/07/building-a-hand-tracking-system-using-opencv/" target="_blank" rel="noopener noreferrer">link</a>.</div>
+    </div>
 </body>
 </html>

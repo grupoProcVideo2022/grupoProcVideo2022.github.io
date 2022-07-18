@@ -41,6 +41,11 @@ footer {
 	clear: both;
 	text-align: center;
 	line-height: 1.8;
+
+}
+
+.footer{
+  padding-bottom: 20px;
 }
 
 code {
@@ -88,19 +93,19 @@ code {
 .title{
   margin: 10px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .subtitle{
   margin: 10px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .text{
   margin: 5px 10px;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 #area {	
@@ -122,6 +127,7 @@ code {
   height: 100%;
   max-height: 200px;
   height: auto;
+  margin: 5px 10px;
 }
 
 .titlelab {
