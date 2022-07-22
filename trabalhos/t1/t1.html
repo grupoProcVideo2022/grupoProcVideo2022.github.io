@@ -63,14 +63,15 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
     <div class="text">
         A detecção de mãos do MediaPipe utiliza um pipeline de MachineLearning que reune dois modelos:
         <ul>
-            <li>Detecção da Palma</li>
+            <li><b>Detecção da Palma</b></li>
             A detecção das palmas da mão é utilizada como etapa inicial para simplificar o modelo, já que lidar com as articulações dos dedos torna o modelo mais complexo.
             Para detectar a palma da mão o MediaPipe usa um single-shot detector com bounding boxes quadradas. 
-            <li>Detecção de LandMarks da mão</li>
+            <li><b>Detecção de LandMarks da mão</b></li>
             Após obter as informações dadas pela detecção da palma o modelo infere a posição de 21 pontos-chave da mão, isso é realizado utilizando um modelo que foi treinado com
              aproximadamente 30 mil imagens. Além disso um modelo sintetico de uma mão foi renderizado em vários fundos para que fossem mapeados para as coordenados 3D reais, isso permite uma mairo precisão ao detectar diferentes poses das mãos.
         </ul>
-    </div
+    </div>
+    <div class="subtitle">Resultado Obtido</div>
     <div class="text">
         <video width="352" height="640" controls="">
             <source src="videos/hand_tracking.webm" type="video/webm">
