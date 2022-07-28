@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <title>Relatorio Lab 7</title>
+</head>
+<body>
+    <a href=https://drive.google.com/file/d/12XUwWS_SQobuwqA3K9PY9fb4OcB87R6S/view?usp=sharing
+    >Código no Colab</a>
+    <div>
+        <p>DETECÇÃO DA FACE</p>
+						<img src="imgs/rosto_ana.png" alt="">
+            <img src="imgs/rosto_mariana.png" alt="">
+            <img src="imgs/rosto_arthur.png" alt="">                      
+						<p>   </p>
+						
+         <p>DETECÇÃO DE SORRISO</p>
+						<img src="imgs/sorriso_ana.png" alt="">
+            <img src="imgs/sorriso_mariana.png" alt="">
+            <img src="imgs/sorriso_arthur.png" alt="">                      
+						<p>   </p>		
+					
+         <p>DETECÇÃO DE OLHOS</p>
+            <img src="imgs/olhos_ana.png" alt="">
+            <img src="imgs/olhos_mariana.png" alt="">
+            <img src="imgs/olhos_arthur.png" alt="">                      
+						<p>   </p>
+            
+            <img src="imgs/olhos_d_ana.png" alt="">
+            <img src="imgs/olhos_d_mariana.png" alt="">
+            <img src="imgs/olhos_d_arthur.png" alt="">                      
+						<p>   </p>
+						
+         <p>FINAL</p>
+            <img src="imgs/final_ana.png" alt="">
+            <img src="imgs/final_mariana.png" alt="">
+            <img src="imgs/final_arthur.png" alt="">                      
+						<p>   </p>        
+						
+	    
+	    		<p>CONCLUSÃO</p>
+	    		
+	   	         <p>   </p>
+    </div>
+</body>
+</html>
