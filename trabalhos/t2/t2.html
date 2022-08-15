@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/main.css">
-    <title>T1</title>
+    <title>T2</title>
 </head>
 <body>
     <div class="title">Tema: Reconhecimento visual de acordes tocados em violão e guitarra.</div>
@@ -68,13 +68,41 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
             Para detectar a palma da mão o MediaPipe usa um single-shot detector com bounding boxes quadradas. 
             <li><b>Detecção de LandMarks da mão</b></li>
             Após obter as informações dadas pela detecção da palma o modelo infere a posição de 21 pontos-chave da mão, isso é realizado utilizando um modelo que foi treinado com
-             aproximadamente 30 mil imagens. Além disso um modelo sintetico de uma mão foi renderizado em vários fundos para que fossem mapeados para as coordenados 3D reais, isso permite uma mairo precisão ao detectar diferentes poses das mãos.
+             aproximadamente 30 mil imagens. Além disso um modelo sintetico de uma mão foi renderizado em vários fundos para que fossem mapeados para as coordenados 3D reais, isso permite uma maior precisão ao detectar diferentes poses das mãos.
         </ul>
     </div>
-    <div class="subtitle">Resultado Obtido</div>
+    <div class="subtitle">Evolução do projeto</div>
+    <div class="text">
+        Foi utilizada, num primeiro momento, a versão bruta da biblioteca MediaPipe. Ela consegue ser eficaz na detecção da mão no vídeo, capturando os pontos-chave e fazendo o acompanhamento.
+        O vídeo abaixo ilustra o resultado do processamento de um dos vídeos pela biblioteca.
+    </div>
     <div class="text">
         <video width="352" height="640" controls="">
             <source src="videos/hand_tracking.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="text">
+        Entretanto, no trabalho de <a href="https://github.com/kinivi/hand-gesture-recognition-mediapipe" target="_blank" rel="noopener noreferrer">Takahashi</a>, o MediaPipe é usado em conjunto com um classificador de sinais. Essa biblioteca mais elaborada se mostrou útil
+        no projeto devido ao fato de já realizar o pré-processamento dos pontos chave da mão e conseguir criar o conjunto de dados de treinamento para o classificador.<br>
+        Para rodar a solução, basta baixar o repositório e executar o arquivo <i>app.py</i>. Para criar o conjunto de dados usado para o treinamento, deve-se apertar a tecla 'k' e acionar os botões de 0 até 9, fazendo os diferentes sinais
+        que o classificador deve ser responsável por reconhecer.<br>
+        Para o projeto, os sinais usados foram acordes comumente tocados em violões e guitarras:
+        <ul>
+            <li>Lá maior, rotulado como A Major</li>
+            <li>Si maior, rotulado como B Major</li>
+            <li>Dó maior, rotulado como C Major</li>
+            <li>Ré maior, rotulado como D Major</li>
+            <li>Fá maior, rotulado como F Major</li>
+        </ul>
+        O objeto do conjunto de dados é formado por seus atributos e rótulo de classe.
+        Cada um desses acordes é um rótulo de classe, cujos atributos são as coordenadas dos pontos chave pré-processados. <br>
+        Abaixo tem-se um resultado inicial de testes realizados com essa solução.
+    </div>
+    <div class="text">
+        <video width="750" height="auto" controls="">
+            <source src="videos/demo-com-guitarra.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -83,6 +111,8 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
     <div class="text">1. <i>OpenCV & Python: How to Change Resolution or Rescale Frame</i>, <a href="https://www.codingforentrepreneurs.com/blog/open-cv-python-change-video-resolution-or-scale/" target="_blank" rel="noopener noreferrer">link</a>.</div>
     <div class="text">2. <i>MediaPipe online reference</i>, <a href="https://mediapipe.dev/" target="_blank" rel="noopener noreferrer">link</a>.</div>
     <div class="text">3. <i>Building a Hand Tracking System using OpenCV</i>, <a href="https://www.analyticsvidhya.com/blog/2021/07/building-a-hand-tracking-system-using-opencv/" target="_blank" rel="noopener noreferrer">link</a>.</div>
+    <div class="text">4. <i>Hand gesture recognition using MediaPipe
+    </i>, <a href="https://github.com/kinivi/hand-gesture-recognition-mediapipe" target="_blank" rel="noopener noreferrer">link</a>.</div>
     </div>
 </body>
 </html>
