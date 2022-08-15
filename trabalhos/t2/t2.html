@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <title>T1</title>
+</head>
+<body>
+    <div class="title">Tema: Reconhecimento visual de acordes tocados em violão e guitarra.</div>
+    <div class="title">Contexto</div>
+    <div class="text">
+        Um aluno que deseja aprender teoria musical e tem como instrumento de estudo um
+violão e/ou uma guitarra sente dificuldade ao estudar sozinho e acha incômodo procurar o tempo
+inteiro na internet os desenhos dos acordes quando está estudando uma música nova. Ao mesmo
+tempo, um músico profissional realizará um show com uma banda sem ensaiar ou conhecer o
+repertório de antemão, o que pode gerar confusão e erros durante a execução das músicas.
+    </div>
+    <div class="title">Cenário do trabalho</div>
+    <div class="text">Por isso, uma ferramenta capaz de reconhecer rapidamente quais acordes são
+        usados nos vídeos das músicas que devem tocadas facilitaria o trabalho tanto do estudante como do
+        músico profissional. O objetivo é usar vídeos gravados como sinal de entrada, realizar o pré-processamento e usar um algoritmo de classificação para reconhecer os acordes usados no vídeo.
+        A saída será o mesmo vídeo, acrescido do texto indicando a sigla dos acordes reconhecidos.
+    </div>
+
+    <div class="title">Atividades do Trabalho</div>
+    <div class="text">
+
+        O trabalho foi dividido nas seguintes fases:
+        <ul>
+            <li>Captação dos vídeos</li>
+            <li>Pré processamento dos vídeos captados</li>
+            <li>Treinamento do reconhecedor de acordes</li>
+            <li>Teste do reconhecedor de acordes</li>
+            <li>Avaliação dos resultados</li>
+        </ul>
+    </div>
+    <div class="title">Implementação do Trabalho</div>
+    <div class="subtitle">Pré-processamento dos vídeos</div>
+    <div class="text">Os vídeos captados devem possuir um enquadramento específico, bem como um formato e resolução pré definidos.
+        O algoritmo de pré-processamento serve para normalizar os vídeos nesse sentido. Apenas o enquadramento é uma tarefa anterior, que será de 
+        responsabilidade do próprio usuário.
+        Esses vídeos serão a base de dados usada no treinamento e teste do algoritmo de classificação.
+        Para ajustar a resolução do vídeo e o formato, é usado um código semelhante ao criado em aula, no laboratório 3.
+        <img class="imgs" style="max-height: 100%;" src="imgs/code_example.png" alt="" srcset="">
+    </div>
+    <div class="text">Na imagem acima, a resolução do vídeo é 1080x1920, e o código reduz a 
+        resolução em 25%.
+    </div>
+    <div class="subtitle">Treinamento do reconhecedor de acordes usando algoritmo de classificação</div>
+
+    <div class="text">
+        Para o reconhecedor de acordes, será utilizada a biblioteca <a href="https://mediapipe.dev/" target="_blank" rel="noopener noreferrer">MediaPipe</a>,
+        que possui uma funcionalidade capaz de realizar a identificação de mãos em vídeo (<a href="https://google.github.io/mediapipe/solutions/hands" target="_blank" rel="noopener noreferrer">ver mais</a>).
+        Até o momento, usando MediaPipe, é possível fazer corretamente a captação dos movimentos da mão.
+    </div>
+    <div class="subtitle">MediaPipe</div>
+    <div class="text">
+        MediaPipe é um framework open-source que permite construir pipelines para inferir modelos, realizar processamento de vídeos, transformação de dados entre outros.  
+    </div>
+     <div class="subtitle">Detecção de mãos com MediaPipe</div>
+    <div class="text">
+        A detecção de mãos do MediaPipe utiliza um pipeline de MachineLearning que reune dois modelos:
+        <ul>
+            <li><b>Detecção da Palma</b></li>
+            A detecção das palmas da mão é utilizada como etapa inicial para simplificar o modelo, já que lidar com as articulações dos dedos torna o modelo mais complexo.
+            Para detectar a palma da mão o MediaPipe usa um single-shot detector com bounding boxes quadradas. 
+            <li><b>Detecção de LandMarks da mão</b></li>
+            Após obter as informações dadas pela detecção da palma o modelo infere a posição de 21 pontos-chave da mão, isso é realizado utilizando um modelo que foi treinado com
+             aproximadamente 30 mil imagens. Além disso um modelo sintetico de uma mão foi renderizado em vários fundos para que fossem mapeados para as coordenados 3D reais, isso permite uma mairo precisão ao detectar diferentes poses das mãos.
+        </ul>
+    </div>
+    <div class="subtitle">Resultado Obtido</div>
+    <div class="text">
+        <video width="352" height="640" controls="">
+            <source src="videos/hand_tracking.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="footer">
+    <div class ="title">Referências</div>
+    <div class="text">1. <i>OpenCV & Python: How to Change Resolution or Rescale Frame</i>, <a href="https://www.codingforentrepreneurs.com/blog/open-cv-python-change-video-resolution-or-scale/" target="_blank" rel="noopener noreferrer">link</a>.</div>
+    <div class="text">2. <i>MediaPipe online reference</i>, <a href="https://mediapipe.dev/" target="_blank" rel="noopener noreferrer">link</a>.</div>
+    <div class="text">3. <i>Building a Hand Tracking System using OpenCV</i>, <a href="https://www.analyticsvidhya.com/blog/2021/07/building-a-hand-tracking-system-using-opencv/" target="_blank" rel="noopener noreferrer">link</a>.</div>
+    </div>
+</body>
+</html>
