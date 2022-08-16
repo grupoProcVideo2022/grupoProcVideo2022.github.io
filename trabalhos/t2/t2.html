@@ -91,10 +91,15 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
         Para o projeto, os sinais usados foram acordes comumente tocados em violões e guitarras:
         <ul>
             <li>Lá maior, rotulado como A Major</li>
+            <img width="750" src="imgs/a-major.png" alt="" srcset="">
             <li>Si maior, rotulado como B Major</li>
+            <img width="750" src="imgs/b-major.png" alt="" srcset="">
             <li>Dó maior, rotulado como C Major</li>
+            <img width="750" src="imgs/c-major.png" alt="" srcset="">
             <li>Ré maior, rotulado como D Major</li>
+            <img width="750" src="imgs/d-major.png" alt="" srcset="">
             <li>Fá maior, rotulado como F Major</li>
+            <img width="750" src="imgs/f-major.png" alt="" srcset="">
         </ul>
         O objeto do conjunto de dados é formado por seus atributos e rótulo de classe.
         Cada um desses acordes é um rótulo de classe, cujos atributos são as coordenadas dos pontos chave pré-processados. <br>
@@ -109,7 +114,16 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
     <div class="text">
         Como é possível observar pelo vídeo demonstração, o algoritmo encontrou dificuldade para identificar os pontos chave da mão.
         Esse fato se repetiu no momento anterior (durante a criação da base de treinamento), e esse fator dificultou a criação dos objetos rotulados.
-        Nesse momento, se faz necessário criar uma gama maior de objetos rotulados e reconstruir o modelo do classificador.
+        Após a criação de uma gama maior de objetos rotulados e a reconstrução do classificador, o resultado obtido foi esse:
+    </div>
+    <div class="text">
+        <video width="750" height="auto" controls="">
+            <source src="videos/demo-guitarra-2.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="text">
+        Verifica-se, portanto, que há uma certa instabilidade do modelo, mas que uma base de dados apropriada por ajudá-lo a identificar propriamente os acordes.
     </div>
     <div class="footer">
     <div class ="title">Referências</div>
