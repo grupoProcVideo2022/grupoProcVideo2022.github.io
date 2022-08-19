@@ -105,9 +105,16 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
             <img width="750" src="imgs/f-major.png" alt="" srcset="">
         </ul>
         O objeto do conjunto de dados é formado por seus atributos e rótulo de classe.
-        Cada um desses acordes é um rótulo de classe, cujos atributos são as coordenadas dos pontos chave pré-processados. <br>
+        Cada um desses acordes é um rótulo de classe, cujos atributos são as coordenadas dos pontos chave pré-processados. <br> <br>
+        Os pontos chave já rotulados são salvos no arquivo <i>keypoint.csv</i> e os rótulos de classe são salvos no arquivo <i>keypoint_classifier_label.csv</i>. <br>Esses arquivos são
+        usados no treinamento do modelo de classificação. <br>
+
+        <img width="750" src="imgs/base-de-dados.png" alt="" srcset=""> <br>
+        <img width="750" src="imgs/rotulos-de-classe.png" alt="" srcset="">
+        <br>
         Abaixo tem-se um resultado inicial de testes realizados com essa solução.
     </div>
+    
     <div class="text">
         <video width="750" height="auto" controls="">
             <source src="videos/demo-com-guitarra.webm" type="video/webm">
@@ -115,8 +122,8 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
         </video>
     </div>
     <div class="text">
-        Como é possível observar pelo vídeo demonstração, o algoritmo encontrou dificuldade para identificar os pontos chave da mão.
-        Esse fato se repetiu no momento anterior (durante a criação da base de treinamento), e esse fator dificultou a criação dos objetos rotulados.
+        Como é possível observar pelo vídeo demonstração, o algoritmo encontrou dificuldade para identificar os pontos chave da mão. <br>
+        Esse fato se repetiu no momento anterior (durante a criação da base de treinamento), e esse fator dificultou a criação dos objetos rotulados. <br>
         Após a criação de uma gama maior de objetos rotulados e a reconstrução do classificador, o resultado obtido foi esse:
     </div>
     <div class="text">
@@ -126,7 +133,21 @@ repertório de antemão, o que pode gerar confusão e erros durante a execução
         </video>
     </div>
     <div class="text">
-        Verifica-se, portanto, que há uma certa instabilidade do modelo, mas que uma base de dados apropriada por ajudá-lo a identificar propriamente os acordes.
+        Verifica-se, portanto, que há uma certa instabilidade do modelo, mas que uma base de dados apropriada por ajudá-lo a identificar propriamente os acordes. <br>
+        Após um novo treinamento do modelo, e ajustes tanto na iluminação quanto no enquadramento do vídeo, os resultados obtidos foram mais promissores. <br>
+        Abaixo segue o vídeo usado como <i>input</i>, e na sequência, o vídeo de saída.
+    </div>
+    <div class="text">
+        <video width="auto" height="400" controls="">
+            <source src="videos/demo-guitarra.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="text">
+        <video width="auto" height="400" controls="">
+            <source src="videos/acordes-identificados.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
     </div>
     <div class="footer">
     <div class ="title">Referências</div>
